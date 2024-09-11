@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 // Add commands to deploy your Docker container here
-                sh 'docker run -d -p 8081:80 my-website'
+                sh 'docker run -d -p 8084:80 my-website'
             }
         }
     }
