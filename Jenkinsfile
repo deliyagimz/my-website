@@ -7,16 +7,11 @@ pipeline {
                 sh 'docker build -t my-website .'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-                // Add your test steps here
-            }
-        }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Add your deploy steps here
+                // Add commands to deploy your Docker container here
+                sh 'docker run -d -p 8081:80 my-website'
             }
         }
     }
